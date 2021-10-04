@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+<div class="root">
+<header class="header">
+    <nav class="navigation">
+        <ul class="navigation__links">
+            <li><a href="#about" class="navigation__link">About me</a></li>
+            <li><a href="#portfolio" class="navigation__link">Portfolio</a></li>
+            <li><a href="#contacts" class="navigation__link">Contacts</a></li>
+        </ul>
+    </nav>
+    <h1 class="header__title">Elena Vsiakikh,</h1>
+    <p class="header__text">Front-end developer</p>
+</header>
+<section id="about">
+    <div class="about__content">
+    <img class="about__pic" src="cat.png" alt="picture of a cat">
+    <div class="about__text">
+    <h2 class="about__title">About me</h2>
+    <p>Junior Frontend Developer with passion for building responsive web applications using HTML, CSS and JavaScript.
+        Yandex.Praktikum graduate with strong willingness to master and apply knowledge of web development and design.</p>
+    </div>
+    </div>
+</section>
+<section id="portfolio">
+    <div class="portfolio__content">
+    <h2 class="portfolio__title root__title">Portfolio</h2>
+        <div class="portfolio__pics">
+    <figure>
+        <img class="portfolio__pic" src="game.png"
+             alt="Picture of grammar game">
+        <figcaption>Flashcards</figcaption>
+        <button class="open-window" id="flash-button">Open</button>
+    </figure>
+    <figure>
+        <img class="portfolio__pic" src="piano.png"
+             alt="Picture of piano app">
+        <figcaption>Virtual Piano</figcaption>
+        <button class="open-window" id="piano-button">Open</button>
+    </figure>
+
+        </div>
+    </div>
+</section>
+<section id="contacts">
+    <div class="contacts__content">
+    <h2 class="contacts__title root__title">Contacts</h2>
+    <a href="https://www.linkedin.com/in/elena-vsiakikh-aa041a21b/"><img src="linkedin.svg" alt="linkedin icon"></a>
+    <a href="https://github.com/Vs-elen"><img src="github.svg" alt="Github icon"></a>
+    </div>
+</section>
+<footer class="footer">
+    <p>Copyright &#9400; 2021 vs_elen. All Rights Reserved</p>
+</footer>
+    <div class="window window-closed">
+        <div class="window-content">
+            <div class="window-closer">&#215;</div>
+            <h1 class="window-title"></h1>
+            <p class="window-link">You can see this project at the following link: <a class="window-a"></a></p>
+            <p class="window-info"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
