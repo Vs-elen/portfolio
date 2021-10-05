@@ -12,11 +12,13 @@
 <div class="root">
 <header class="header">
     <nav class="navigation">
-        <ul class="navigation__links">
-            <li><a href="#about" class="navigation__link">About me</a></li>
-            <li><a href="#portfolio" class="navigation__link">Portfolio</a></li>
-            <li><a href="#contacts" class="navigation__link">Contacts</a></li>
+        <ul class="navigation__links hamburger">
+            <li class="navigation__item"><a href="#about" class="navigation__link">About me</a></li>
+            <li class="navigation__item"><a href="#portfolio" class="navigation__link">Portfolio</a></li>
+            <li class="navigation__item"><a href="#contacts" class="navigation__link">Contacts</a></li>
         </ul>
+        <img class="navigation__menu" src="hamburger.svg" alt="hamburger menu">
+        <img class="navigation__menu-close" src="close.png" alt="close hamburger menu">
     </nav>
     <h1 class="header__title">Elena Vsiakikh,</h1>
     <p class="header__text">Front-end developer</p>
@@ -36,7 +38,7 @@
     <h2 class="portfolio__title root__title">Portfolio</h2>
         <div class="portfolio__pics">
     <figure>
-        <img class="portfolio__pic" src="game.png"
+        <img class="portfolio__pic flash-pic" src="game.png"
              alt="Picture of grammar game">
         <figcaption>Flashcards</figcaption>
         <button class="open-window" id="flash-button">Open</button>
