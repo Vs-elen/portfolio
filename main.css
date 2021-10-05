@@ -1,11 +1,11 @@
-* {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .root {
-    width: 1920px;
+    max-width: 1824px;
     margin: 0 auto;
     font-family: Roboto;
     font-style: normal;
@@ -14,17 +14,20 @@
 .header {
     width: 100%;
     height: 648px;
-    background-color: cornflowerblue;
-    background-image: url("head.jpg");
+    margin: 0 auto;
+    background: no-repeat url("pictures/head.jpg");
 }
 
 .navigation {
     width: 100%;
     height: 112px;
+    margin: 0 auto;
     background-color: #d2a32d;
+    position: relative;
 }
 
 .navigation__links {
+    margin: 0;
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
@@ -50,15 +53,14 @@
 }
 
 .header__text {
-
     font-size: 64px;
     color: #292301;
     margin-left: 276px;
 }
 
-.about {
+#about {
     width: 100%;
-
+    margin: 0 auto;
 }
 
 .about__content {
@@ -91,6 +93,11 @@
     position: relative;
 }
 
+#portfolio {
+    margin: 0 auto;
+    width: 100%;
+}
+
 .root__title {
     padding: 32px 0;
     font-weight: 500;
@@ -99,25 +106,30 @@
 }
 
 .portfolio__pic {
-    height: 340px;
+    max-height: 260px;
     opacity: .5;
 
 }
 
-.portfolio__pic:first-child {
-    margin-right: 32px;
-}
 
+figure {
+    position: relative;
+}
 .portfolio__pics {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+
 }
 
 figcaption {
     padding: 32px 0;
     font-weight: 500;
     font-size: 32px;
+}
+
+#contacts {
+    margin: 0 auto;
 }
 
 .contacts__content {
@@ -127,6 +139,7 @@ figcaption {
 }
 
 .footer {
+    margin: 0 auto;
     background-color: #faf6eb;
     padding: 48px 0;
     font-weight: 500;
@@ -156,14 +169,14 @@ figcaption {
 
 #flash-button {
     position: absolute;
-    left: 500px;
-    top: 270px;
+    left: 25%;
+    top: 50%;
 }
 
 #piano-button {
     position: absolute;
-    left: 1080px;
-    top: 270px;
+    left: 35%;
+    top: 50%;
 }
 
 
@@ -244,3 +257,157 @@ figcaption {
     margin: 0 24px;
 }
 
+@media (min-width: 900px) {
+    .navigation__menu {
+        visibility:hidden;
+        display:none;
+    }
+
+    .navigation__menu-close {
+        visibility:hidden;
+        display: none;
+    }
+}
+
+@media (max-width: 975px) {
+
+    .portfolio__pic {
+        max-height: 150px;
+    }
+
+    #flash-button {
+        left: 8%;
+        top: 50%;
+    }
+
+    #piano-button {
+        left: 25%;
+        top: 50%;
+    }
+
+    .header__title {
+        font-size: 56px;
+        margin-top: 160px;
+        margin-left: 120px;
+    }
+
+    .header__text {
+        font-size: 56px;
+        margin-left: 120px;
+    }
+}
+
+@media (max-width: 899px) {
+    .navigation__links {
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        height: 200px;
+        width: 300px;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        background: #f2e9d8;
+        color: #292301;
+        list-style: none;
+        flex-direction: column;
+        gap: 24px;
+        padding-top: 0;
+        padding-bottom: 24px;
+        border-radius: 24px;
+    }
+
+    .navigation__menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        display: block;
+    }
+
+    .navigation__menu-close {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        display: none;
+    }
+
+    .showMenu {
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 678px) {
+    .window-closer {
+        top: 25px;
+        right: 25px;
+    }
+
+    .window-content {
+        width: 70%;
+    }
+
+    .window-link, .window-info {
+        font-size: 16px;
+        padding-bottom: 16px;
+        margin: 0 24px;
+    }
+
+    .window-title {
+        padding: 16px 0;
+        margin: 0;
+    }
+
+    @media (max-width: 614px) {
+        .portfolio__pics {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #flash-button {
+            left: 8%;
+            top: 50%;
+        }
+
+        #piano-button {
+            left: 25%;
+            top: 50%;
+        }
+
+        .header__title {
+            font-size: 36px;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+
+        .header__text {
+            font-size: 36px;
+            margin-left: 100px;
+        }
+
+        .about__content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about__pic {
+            margin: 0;
+        }
+
+        .about__text {
+            width: 100%;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .root__title {
+            padding: 28px 0;
+            font-size: 36px;
+        }
+        .footer {
+            font-size: 18px;
+        }
+    }
+}
